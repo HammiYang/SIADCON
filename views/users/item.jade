@@ -12,19 +12,19 @@ block content
             form(action='/users/item' method='post' autocomplete='off')
               div(class='form-group')
                 label(for="seguridad")='Seguridad'
-                input(required type='number' name='seguridad' min="0" max="10000" step="1" id='monto' placeholder='Monto $' class='form-control')
+                input(required type='number' name='seguridad' min="0" max="10000" step="1" id='monto' placeholder='$' class='form-control')
               div(class='form-group')
-                label(for="basura")='Recolección de Basura'
-                input(required type='number' name='basura' id='basura' min="0" max="10000" step="1" placeholder='Monto $' class='form-control')
+                label(for="basura")='Servicio de Basura'
+                input(required type='number' name='basura' id='basura' min="0" max="10000" step="1" placeholder='$' class='form-control')
               div(class='form-group')
-                label(for="limpieza")='Limpieza de Áreas Comunes'
+                label(for="limpieza")='Limpieza'
                 input(required type='number' name='limpieza' id='limpieza' min="0" max="10000" step="1" placeholder='Monto $' class='form-control')
               div(class='form-group')
-                label(for="luz")='Alumbrado de Áreas Comunes'
-                input(required type='number' name='luz' id='luz' min="0" max="10000" step="1" placeholder='Monto $' class='form-control')
+                label(for="luz")='Iluminación de Áreas Comunes'
+                input(required type='number' name='luz' id='luz' min="0" max="10000" step="1" placeholder='$' class='form-control')
               div(class='form-group')
-                label(for="tinacos")='Limpieza tinacos'
-                input(required type='number' name='tinacos' id='tinacos' min="0" max="10000" step="1" placeholder='Monto $' class='form-control')
+                label(for="tinacos")='Limpieza de Pipas de Agua'
+                input(required type='number' name='tinacos' id='tinacos' min="0" max="10000" step="1" placeholder='$' class='form-control')
               div(class='form-group')
                 label(for="pago")='Pago Administrador'
                 input(required type='number' name='pago' id='pago' min="0" max="10000" step="1" placeholder='Monto $' class='form-control')  

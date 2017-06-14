@@ -1,17 +1,6 @@
 extends ../templates/default
 include ../templates/nav
 block content
-    div(class='row')
-        div(class='col-md-3 col-md-offset-4')
-            div(class='panel panel-default')
-                div(class='panel-heading')='Selecciona un Mes para mostrar'
-                    div(clas= 'panel-body')
-                        form(action='/users/balance' method='post' autocomplete='off')
-                            div(class='form-group')
-                            label(for="mes")='Mes'
-                            input(required type='month' name='mes' id='mes' placeholder='mes' class='form-control')
-                            button(type="submit" class="btn btn-info btn-lg")='Mostrar'
-   
         div(class='row')
             div(class='col-md-8 col-md-offset-2')
                 h1(aling = "center")='Estado de Cuenta General '
