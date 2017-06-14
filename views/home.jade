@@ -1,0 +1,97 @@
+extends templates/default
+block content
+  if !isAuthenticated
+    .container
+      .row
+      .col-xs-16.text-center
+        .home_text.wow.fadeInUp.animated
+              img(src='images/Bienvenidos.png', alt='')
+              h2 SISTEMA DE ADMINISTRACIÓN CONDOMINAL
+              img(src='images/logo.jpg', alt='')
+   section#SERVICE.services
+      .container
+        .row
+          .col-md-3.text-center
+            .single_service.wow.fadeInUp(data-wow-delay='1s')
+              i.icon-pencil
+              h2 Mantenimiento
+              p Disfruta de nuestros edificios con estructura prolija
+          .col-md-3.text-center
+            .single_service.wow.fadeInUp(data-wow-delay='2s')
+              i.icon-gears
+              h2 Áreas comunes
+              p Con áreas verdes para convivir en familia
+          .col-md-3.text-center
+            .single_service.wow.fadeInUp(data-wow-delay='3s')
+              i.icon-camera
+              h2 Seguridad
+              p Revisión de nuestros espacios 24/7
+          .col-md-3.text-center
+            .single_service.wow.fadeInUp(data-wow-delay='4s')
+              i.icon-magnifying-glass
+              h2 Limpieza
+              p Cuidado de nuestros edificios
+    section#ABOUT.about_us_are
+      .container
+        .row
+          .col-md-12.text-center
+            .about_title
+              h2 CONDOMINIOS
+              img(src='images/shape.png', alt='')
+              
+    section#CONTACT.contact
+      .container
+        .row
+          .col-md-12.text-center
+            .contact_title.wow.fadeInUp.animated
+              h1 Contacta a tu administrador.
+              img(src='images/shape.png', alt='')
+            p Contacta a tu administrador para resolver dudas.
+                h2 Call Me
+            p +52 5530073529
+                h2 E-mail Me
+             p administrador@gmail.com
+                h2 Address
+            p Avenida 608 #300 Gustavo A. Madero Ciudad de México.
+      .container
+        .row
+          .col-md-12.text-center
+            .work-with.wow.fadeInUp.animated
+              h1 Completa comodidad en tu condomio.
+    footer
+      .container
+        .container
+          .row
+            .col-md-12.text-center
+              .footer.wow.fadeInUp.animated
+                img(src='images/log1.jpg', alt='')
+              .social
+                h2 Síguenos en nuestras redes sociales.
+                ul.icon_list
+                  li
+                    a(href='https://www.facebook.com/', target='_blank')
+                      i.fa.fa-facebook
+                  li
+                    a(href='https://twitter.com/', target='_blank')
+                      i.fa.fa-twitter
+                  li
+                    a(href='https://plus.google.com/?hl=es')
+                      i.fa.fa-google-plus
+                  li
+                    a(href='https://mx.linkedin.com/')
+                      i.fa.fa-linkedin
+        .container
+          .row
+            .col-md-12.text-center
+              .copyright_text.wow.fadeInUp.animated
+                p
+                  | © SIADCON 2017. All Right Reserved.
+                 
+                p Made with love for creative people.
+
+    script(src='javascripts/jquery.min.js')
+    script(src='javascripts/bootstrap.min.js')
+    script(src='javascripts/jquery.nicescroll.js')
+    script(src='javascripts/owl.carousel.js')
+    script(src='javascripts/wow.js')
+    script(src='javascripts/script.js')

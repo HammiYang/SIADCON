@@ -1,0 +1,43 @@
+extends ../templates/default
+include ../templates/nav
+block content
+    div(class="col-md-10 col-md-offset-1")
+        h2='Lista de Usuarios Registrados'
+        table(class="table table-striped"
+            aling = 'center')
+            thead(bgcolor="#96ded1 ")
+                tr
+                    th Depto.
+                    th Nombre
+                    th E-mail
+                    th Seguridad
+                    th Servicio de Basura
+                    th Limpieza
+                    th Iluminación de Áreas Comunes
+                    th Limpieza de Pipas de Agua
+                    th Pago para el Administrador
+                    th Total
+            tbody(bgcolor="white" )
+                each item, i in items
+                    tr
+                        td= item._id
+                        td= item.nombre
+                        td= item.email
+                        td= '$'+item.Seguridad
+                        td= '$'+item.RecoleccionBasura
+                        td= '$'+item.LimpiezaComunes
+                        td= '$'+item.AlumbradoComunes
+                        td= '$'+item.Limpiezatinacos
+                        td= '$'+item.PagoAdministrador
+                        td= '$'+item.total
+                            
+        div(class="col-md-3 col-md-offset-1")
+                    table(class="table table-striped"
+                            aling = 'center')
+                        thead()
+                            tr
+                                th
+                                    button(type="button" onclick="location.href='/users/panel'"  class="btn btn-info btn-lg")="Regresar"
+                                th
+                                    button(type="button" onclick="javascript:window.print()"  class="btn btn-info btn-lg")="Imprimir"
+                              

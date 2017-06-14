@@ -1,0 +1,48 @@
+extends ../templates/default
+include ../templates/nav
+block content
+    div(class='row')
+        div(class='col-md-3 col-md-offset-4')
+            div(class='panel panel-default')
+                div(class='panel-heading')='Selecciona un Mes para mostrar'
+                    div(clas= 'panel-body')
+                        form(action='/users/balance' method='post' autocomplete='off')
+                            div(class='form-group')
+                            label(for="mes")='Mes'
+                            input(required type='month' name='mes' id='mes' placeholder='mes' class='form-control')
+                            button(type="submit" class="btn btn-info btn-lg")='Mostrar'
+   
+        div(class='row')
+            div(class='col-md-8 col-md-offset-2')
+                h1(aling = "center")='Estado de Cuenta General '
+                table(class="table table-striped")
+                        thead(bgcolor="#96ded1 ")
+                            tr
+                                td    Mes
+                                td Seguridad
+                                td Basura
+                                td Limpieza
+                                td Iluminación
+                                td Limpieza P.A.
+                                td Pago Admin
+                                td Total
+                        tbody(bgcolor="white" )
+                            each item, i in items
+                                tr
+                                    td= item.mes
+                                    td= '$'+item.seguridad
+                                    td= '$'+item.basura
+                                    td= '$'+item.limpieza
+                                    td= '$'+item.tinacos
+                                    td= '$'+item.pago
+                                    td= '$'+item.luz
+                                    td= '$'+item.total
+                                
+            div(class="col-md-3 col-md-offset-2")
+                table(class="table table-striped")
+                    thead()
+                    tr
+                        th        
+                            button(type="button" onclick="location.href='/users/panel'" name="boton" class="btn btn-info btn-lg")="Regresar"
+                        th
+                            button(type="button" onclick="javascript:window.print()"  class="btn btn-info btn-lg")="Imprimir"              

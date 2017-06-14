@@ -1,0 +1,23 @@
+extends ../templates/default
+
+block content
+  div(class='row')
+    div(class='col-md-6 col-md-offset-3')
+      if message.length > 0
+       div(class='alert alert-success' role='alert')= message
+      if messageErr.length > 0
+       div(class='alert alert-danger' role='alert')= messageErr
+      div(class='panel panel-default')
+        div(class='panel-heading', style='color:#0101DF;')
+          h1 Inicio de sesión
+          div(clas= 'panel-body')
+            form(action='/auth/signin' method='post' autocomplete='off')
+              div(class='form-group')
+                    label(for="email")='E-mail'
+                    input(type='email' name='username' id='email' placeholder='E-mail' class='form-control')
+                  div(class='form-group')
+                    label(for="password")='Contraseña'
+                    input(type='password' name='password' id='password' placeholder='Contraseña' class='form-control')  
+                  button(type="submit" class="btn btn-info btn-lg")='Iniciar Sesión'
+      if authmessage.length > 0
+       div(class='alert alert-danger' role='alert')= authmessage

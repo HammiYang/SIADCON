@@ -1,0 +1,30 @@
+extends ../templates/default
+block content
+  div(class='row')
+    div(style='float:center; font-size: 100%; position: center; top:-10px')
+    div(class='col-md-6 col-md-offset-3')
+      div(class='panel panel-default')
+        div(class='panel-heading', style='color:#0101DF;')
+          h1 Registro de condomino
+          div(clas= 'panel-body', style='color:#00A86B;')
+            form(action='/auth/signup' method='post' autocomplete='off')
+              div(class='form-group')
+                label(for="email")='E-mail'
+                input(required type='email' name='email' id='email' placeholder='E-mail' class='form-control')
+              div(class='form-group')
+                label(for="nombre")='Nombre'
+                input(required type='text' name='nombre' id='nombre' placeholder='Nombre' class='form-control')
+              div(class='form-group')
+                label(for="password")='Contraseña'
+                input(required type='password' name='password' id='password' placeholder='Contraseña' class='form-control') 
+              div(class='form-group')
+                label(for="depto")='Departamento'
+                input(required type='number' name='_id' id='_id'  min="0" max="10000" step="1" placeholder='No. de Departamento' class='form-control')  
+              table(class="table table-striped"
+                              aling = 'center')
+                          thead()
+                              tr
+                                td
+                                  button(type="submit" class="btn btn-info btn-lg")='Registrarse'
+                                td
+                                  button(type="reset" class="btn btn-info btn-lg")='Restablecer'

@@ -1,0 +1,14 @@
+h1=''
+    div(class="col-md-4 col-md-offset-4")
+     table(class="table table-striped"
+            aling = 'center')
+        thead()
+            tr
+                th
+                 button(type="button" onclick="location.href='/users/balance'" class="btn btn-info btn-lg")='Estado de Cuenta General'
+                th
+                 button(type="button" onclick="location.href='/users/myBalance'" class="btn btn-info btn-lg")='Mostrar mi Estado de Cuenta'
+                th
+                 button(type="button" onclick="location.href='/'"  class="btn btn-info btn-lg")="Regresar"
+div(class="col-xs-12 col-md-8")  
+    h1='Bienvenido, '+ user.nombre + '.'

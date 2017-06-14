@@ -1,0 +1,38 @@
+extends ../templates/default
+include ../templates/nav
+block content
+
+ div(class='row')
+    div(class='col-md-6 col-md-offset-3')
+      if message.length > 0
+        div(class='alert alert-success' role='alert')= message
+      div(class='panel panel-default')
+        div(class='panel-heading')='Nuevo Pago de Mantenimiento'
+          div(clas= 'panel-body')
+            form(action='/users/item' method='post' autocomplete='off')
+              div(class='form-group')
+                label(for="seguridad")='Seguridad'
+                input(required type='number' name='seguridad' min="0" max="10000" step="1" id='monto' placeholder='Monto $' class='form-control')
+              div(class='form-group')
+                label(for="basura")='Servicio de Basura'
+                input(required type='number' name='basura' id='basura' min="0" max="10000" step="1" placeholder='$' class='form-control')
+              div(class='form-group')
+                label(for="limpieza")='Limpieza'
+                input(required type='number' name='limpieza' id='limpieza' min="0" max="10000" step="1" placeholder='$' class='form-control')
+              div(class='form-group')
+                label(for="luz")='Iluminación de Áreas Comunes'
+                input(required type='number' name='luz' id='luz' min="0" max="10000" step="1" placeholder='$' class='form-control')
+              div(class='form-group')
+                label(for="tinacos")='Limpieza Pipas de Agua'
+                input(required type='number' name='tinacos' id='tinacos' min="0" max="10000" step="1" placeholder='$' class='form-control')
+              div(class='form-group')
+                label(for="pago")='Pago para el Administrador'
+                input(required type='number' name='pago' id='pago' min="0" max="10000" step="1" placeholder='$' class='form-control')  
+              div(class='form-group')
+                label(for="mes")='Mes'
+                input(required type='month' name='mes' id='mes' placeholder='Mes' class='form-control') 
+              tr
+                th 
+                  button(type="submit" class="btn btn-info btn-lg")='Registrar'
+                th 
+                  button(type="button" onclick="location.href='/users/panel'" name="boton" class="btn btn-info btn-lg")="Regresar"
