@@ -1,12 +1,9 @@
 extends ../templates/default
 block content
-    //&& user._id =='592f8cd21c4d5a1110a6be8e'
     if user.nombre == 'administrador' && user.email == 'administrador@gmail.com'
        include adm
         
      else 
       include user
      figure(class="col-md-6  col-md-offset-4")
-        img(src=".././images/log2.jpg", alt="SIADCON", title="SIADCON"  )
-     
-     
+        img(src=".././images/log2.jpg", alt="SIADCON", title="SIADCON")
